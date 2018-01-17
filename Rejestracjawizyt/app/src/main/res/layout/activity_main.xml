@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:text="Podaj numer pesel"
+        android:hint="Podaj numer pesel"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:singleLine="false"

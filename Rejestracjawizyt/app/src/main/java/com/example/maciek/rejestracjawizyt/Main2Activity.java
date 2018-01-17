@@ -3,6 +3,8 @@ package com.example.maciek.rejestracjawizyt;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -13,6 +15,8 @@ import butterknife.OnClick;
 
 public class Main2Activity extends AppCompatActivity {
 
+    @BindView(R.id.recyclerViewkawy)
+    RecyclerView recyclerView;
 
 
     @Override
@@ -25,6 +29,10 @@ public class Main2Activity extends AppCompatActivity {
         Lekarze_List.add(new Lekarz("Maciej Paprykarz","Rodzinny"));
         Lekarze_List.add(new Lekarz("Maciej Dekarz","Rodzinny"));
         Lekarze_List.add(new Lekarz("Maciej Tapeciarz","Rodzinny"));
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        LekaAdapter placeAdapter = new LekaAdapter(Lekarze_List);
+        recyclerView.setAdapter(placeAdapter);
     }
 
 }

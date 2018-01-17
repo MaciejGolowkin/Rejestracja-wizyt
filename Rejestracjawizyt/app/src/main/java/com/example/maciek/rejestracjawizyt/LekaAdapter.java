@@ -19,6 +19,10 @@ public class LekaAdapter extends RecyclerView.Adapter<LekaAdapter.ViewHolder> {
 
     ArrayList<Lekarz> Lekarze_List= new ArrayList<>();
 
+    public LekaAdapter(ArrayList<Lekarz> kawy_List) {
+        Lekarze_List = kawy_List;
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext())
